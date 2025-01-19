@@ -22,15 +22,25 @@ cd antora-playbook
 npm i -g @antora/cli@3.1 @antora/site-generator@3.1
 ```
 
-
 [start=3]
+. Login to github
+
+https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git[For use with private repos.] +
+macos:
+```shell
+brew install gh
+gh auth login
+```
+
+
+[start=4]
 . Build site- --fetch prevent to use cached files
 
 ```shell
 npx antora --fetch ./antora-playbook.yml
 ```
 
-[start=4]
+[start=5]
 . move to webserver
 ```shell
 rsync -aP ./ root@192.168.88.200:/mnt/user/webserver_antora
