@@ -1,0 +1,32 @@
+git repository for antora playbook. 
+
+Antora playbook will get the documentation from all other git repositorys and build a static site. 
+
+== Get started
+
+.  Clone projet
+//-
+
+```shell
+git clone https://github.com/stian90/antora-playbook
+```
+
+```shell
+cd antora-playbook
+```
+
+[start=2]
+. Install Antora (if not installaed globaly)
+
+```
+npm i -g @antora/cli@3.1 @antora/site-generator@3.1
+```
+
+
+[start=3]
+. Build site- --fetch prevent to use cached files
+
+```shell
+npx antora --fetch ./antora-playbook.yml
+```
+
