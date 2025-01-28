@@ -43,5 +43,14 @@ npx antora --fetch ./antora-playbook.yml
 [start=5]
 . move to webserver
 ```shell
-rsync -aP ./ root@192.168.88.200:/mnt/user/webserver_antora
+rsync -aP ./build/site/ root@192.168.88.200:/mnt/user/webserver_antora
 ```
+
+[start=6]
+. Run localy
+```shell
+npx antora --fetch ./antora-playbook-locale.yml
+```
+This will genereta a "build" folder, and you can now preview the site from:
+
+`./antora-playbook/build/site/index.html`
